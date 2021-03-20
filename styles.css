@@ -1,1 +1,77 @@
-/*Maak hier jouw CSS!*/
+body{
+            display: grid;
+            grid-template-rows: 50px 174px 100px auto 50px;
+            grid-template-columns: 1fr 1fr 1fr ;
+            background-color: cornsilk;
+            color: cornsilk;
+            grid-gap: 16px;
+            grid-template-areas:
+            "header C C"
+            "text C C"
+            "text E D"
+            "text E ."
+            "Footer Footer Footer";
+
+        }
+        header, #text, #C, #D, #E, Footer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-style: solid;
+            border-color: cornflowerblue;
+            box-sizing: border-box;
+            border-radius: 10px;
+
+        }
+
+        header {
+            background-color: cadetblue;
+            grid-area: header;
+
+        }
+
+        #text {
+            background-color: cadetblue;
+            grid-area: text;
+            padding: 8px;
+        }
+
+        #C {
+            background-color: cadetblue;
+            grid-area: C;
+        }
+
+        #D {
+            background-color: cadetblue;
+            grid-area: D;
+        }
+
+        #E {
+            background-color: cadetblue;
+            grid-area: E;
+        }
+
+        Footer {
+            background-color: cadetblue;
+            grid-area: Footer;
+        }
+
+
+
+    @media screen and (max-width: 576px) {
+
+        body {
+            display: grid;
+            grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+            grid-template-columns: 1fr;
+            background-color: cornsilk;
+            grid-template-areas:
+        "header"
+        "text"
+        "C"
+        "D"
+        "E"
+        "."
+        "Footer";
+        }
+    }
